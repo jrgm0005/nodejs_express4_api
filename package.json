@@ -1,0 +1,18 @@
+{
+  "name": "api_basic",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.9.0",
+    "method-override": "^2.1.2",
+    "mongoose": "~3.6.11"
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Juan Ramón González Morales",
+  "license": "ISC"
+}
