@@ -10,6 +10,10 @@ router.get('/hello', function(req, res) {
    res.send("Hello World!");
 });
 
+var EmailCtrl = require('./email/mailCtrl');
+//email route
+router.post('/email', EmailCtrl.sendEmail);
+
 // User routes
 var UserController = require('./user/UserController');
 
