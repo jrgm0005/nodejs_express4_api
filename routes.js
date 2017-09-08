@@ -10,8 +10,9 @@ router.get('/hello', function(req, res) {
    res.send("Hello World!");
 });
 
-var EmailCtrl = require('./email/mailCtrl');
 //email route
+var EmailCtrl = require('./email/mailCtrl');
+
 router.post('/email', EmailCtrl.sendEmail);
 
 // User routes
@@ -25,6 +26,11 @@ router.route('/users/:id')
   .get(UserController.findById)
   .put(UserController.updateUser)
   .delete(UserController.deleteUser);
+
+// Check "Quiniela" route
+var quinielaCtrl = require('./quinielas/quinielaController');
+
+router.get('/quiniela', quinielaCtrl.leerFicheroQuiniela);
 
 // Export routes
 module.exports = router;
